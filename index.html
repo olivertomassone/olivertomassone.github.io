@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random AFL Player Attributes</title>
+  <script>
+    function getRandomString() {
+      var strings = [
+        "Player 1",
+        "Player 2",
+        "Player 3",
+        // Add more player names here...
+      ];
+      var inputFields = document.getElementsByClassName("attribute");
+      for (var i = 0; i < inputFields.length; i++) {
+        var randomIndex = Math.floor(Math.random() * strings.length);
+        var randomString = strings[randomIndex];
+        inputFields[i].value = randomString;
+      }
+    }
+  </script>
+  <style>
+    /* Add any custom styles here */
+  </style>
+</head>
+<body>
+  <h1>Random AFL Player Attributes</h1>
+  <h2>Your Generated AFL Player:</h2>
+  <table>
+    <tr>
+      <td>Kicking:</td>
+      <td><input type="text" class="attribute" readonly></td>
+    </tr>
+    <tr>
+      <td>Marking:</td>
+      <td><input type="text" class="attribute" readonly></td>
+    </tr>
+    <tr>
+      <td>Tackling:</td>
+      <td><input type="text" class="attribute" readonly></td>
+    </tr>
+    <tr>
+      <td>Speed and Agility:</td>
+      <td><input type="text" class="attribute" readonly></td>
+    </tr>
+    <tr>
+      <td>Strength:</td>
+      <td><input type="text" class="attribute" readonly></td>
+    </tr>
+    <tr>
+      <td>Mongrel:</td>
+      <td><input type="text" class="attribute" readonly></td>
+    </tr>
+  </table>
+  <br>
+  <button onclick="getRandomString()">Generate Random Player Attributes</button>
+</body>
+</html>
